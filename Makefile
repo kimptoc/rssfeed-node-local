@@ -3,7 +3,7 @@ PATH := ./node_modules/.bin:${PATH}
 .PHONY : init clean-docs clean build test dist publish
 
 init:
-  npm install
+	npm install
 
 docs:
 	docco src/*.coffee
