@@ -17,7 +17,7 @@ clean: clean-docs
 build:
 	coffee -o lib/ -c src/ && coffee -c test/rssfeed.coffee
 
-test:
+test: build
 	mocha test/rssfeed
 
 dist: clean init docs build test
