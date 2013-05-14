@@ -1,6 +1,8 @@
 rssfeed-node-local
 ==================
 
+[![Build Status via Travis CI](https://travis-ci.org/kimptoc/rssfeed-node-local.png?branch=master)](https://travis-ci.org/kimptoc/rssfeed-node-local)
+
 API for an RSS Feed based service, NodeJS/Javascript based - using local browser storage.
 
 This is more for testing and so not sure if it will support getting real feeds/items.
