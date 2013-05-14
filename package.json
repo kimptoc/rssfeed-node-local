@@ -17,6 +17,7 @@
   "dependencies": {},
   "devDependencies": {
     "nodeunit": "*",
+    "mocha": "*",
     "docco": "*",
     "coffee-script": ">= 1.3"
   },
