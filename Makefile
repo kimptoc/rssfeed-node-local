@@ -18,7 +18,7 @@ build:
 	coffee -o lib/ -c src/ && coffee -c test/rssfeed.coffee
 
 test: build
-	mocha test/rssfeed
+	./node_modules/mocha/bin/mocha test/rssfeed
 
 dist: clean init docs build test
 

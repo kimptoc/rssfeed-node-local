@@ -1,0 +1,2 @@
+RssfeedLocal = {} unless RssfeedLocal?
+
