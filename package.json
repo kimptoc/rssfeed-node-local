@@ -1,13 +1,14 @@
 {
   "author": "Chris Kimpton <chris@kimptoc.net> (http://kimptoc.net/)",
-  "name": "rssfeed-node-local",
+  "name": "rssfeed-local",
   "description": "RSSFeed API for a local browser storage client",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/kimptoc/rssfeed-node-local.git"
   },
-  "main": "lib/rssfeed-node-local.js",
+  "main": "lib/rssfeed-local.js",
+  "bin": { "rssfeed": "./bin/rssfeed" },
   "scripts": {
     "test": "make test"
   },
@@ -18,6 +19,7 @@
   "devDependencies": {
     "nodeunit": "*",
     "mocha": "*",
+    "should": "*",
     "docco": "*",
     "coffee-script": ">= 1.3"
   },

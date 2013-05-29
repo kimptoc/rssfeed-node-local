@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+var rssfeed = require('../lib/rssfeed-local');
+
+// var args = process.argv.slice(2);
+// console.log(sleepsort(args));
+
+console.log("TODO - make this do something...");
