@@ -16,5 +16,5 @@ API
 - auth/login - probably null for this
 - feeds - what feeds they have (list, add, delete)
 - entries - (in feeds, list, update - read/starred)
-- supportsTags
+- supportsTags - might not support tags/folders
 - tags - for feeds, can be in multiple

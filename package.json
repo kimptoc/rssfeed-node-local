@@ -21,5 +21,17 @@
     "docco": "*",
     "coffee-script": ">= 1.3"
   },
-  "keywords": ["rss", "feed"]
+  "keywords": [
+    "rss",
+    "feed"
+  ],
+  "readmeFilename": "README.md",
+  "gitHead": "2076f9248b04f668ba72f88aaabea6978f2a6767",
+  "bugs": {
+    "url": "https://github.com/kimptoc/rssfeed-node-local/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": "BSD"
 }
