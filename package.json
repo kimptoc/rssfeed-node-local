@@ -15,7 +15,10 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-localstorage":"*",
+    "store":"git://github.com/marcuswestin/store.js.git"
+    },
   "devDependencies": {
     "nodeunit": "*",
     "mocha": "*",

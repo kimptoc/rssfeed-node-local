@@ -15,10 +15,10 @@ clean: clean-docs
 	rm -rf lib/ test/*.js
 
 build:
-	coffee -o lib/ -c src/ && coffee -c test/rssfeed.coffee
+	coffee -o lib/ -c src/ && coffee -o test/ -c src-test/
 
 test: build
-	./node_modules/mocha/bin/mocha test/rssfeed
+	./node_modules/mocha/bin/mocha test/*.js
 
 dist: clean init docs build test
 
