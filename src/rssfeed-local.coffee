@@ -1,4 +1,7 @@
-# RssfeedLocal = {} unless RssfeedLocal?
+feed_store = require './feed-store'
+_ = require 'underscore'
+
+FEEDS_COLL = 'feeds'
 
 class RssfeedLocal
 
@@ -23,17 +26,32 @@ class RssfeedLocal
     @token2 = token2
 
   feeds: (callback) ->
-    console.log("feeds called")
+    # console.log("feeds called")
     if @requires_login == true and @logged_in == false
       callback?(new Error("boo"), undefined)
     else
-      callback?(undefined, [])
+      feed_urls = feed_store.find_all collection:FEEDS_COLL
+      callback?(undefined, _.values(feed_urls))
+
+  add: (feed_url, callback) ->
+    if @requires_login == true and @logged_in == false
+      callback?(new Error("boo"), undefined)
+    else
+      feed_store.add collection:FEEDS_COLL, key:1, value:{feed_url}
+      callback?()
 
   requiresLogin: ->
     @requires_login
 
   setRequiresLogin: (requires_login) ->
     @requires_login = requires_login
+
+  clear: (callback)->
+    if @requires_login == true and @logged_in == false
+      callback?(new Error("boo"), undefined)
+    else
+      feed_store.clear()
+      callback?()
 
 
 module.exports = new RssfeedLocal()

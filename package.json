@@ -24,7 +24,8 @@
     "mocha": "*",
     "should": "*",
     "docco": "*",
-    "coffee-script": ">= 1.3"
+    "coffee-script": ">= 1.3",
+    "underscore":"*"
   },
   "keywords": [
     "rss",
