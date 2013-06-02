@@ -18,3 +18,19 @@ API
 - entries - (in feeds, list, update - read/starred)
 - supportsTags - might not support tags/folders
 - tags - for feeds, can be in multiple
+
+Command Line/REPL
+
+rssfeed
+
+rss>
+
+Options
+
+login
+feeds
+tags
+tag <xxxx> list unread items in tag
+starred list starred items
+all list all unread
+
