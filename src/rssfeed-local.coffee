@@ -10,6 +10,7 @@ class RssfeedLocal
     @logged_in = false
     @token1 = undefined
     @token2 = undefined
+    @next_index = _.keys(feed_store.all()).length + 1
 
 
   login: (token1, token2, callback) ->
@@ -37,7 +38,8 @@ class RssfeedLocal
     if @requires_login == true and @logged_in == false
       callback?(new Error("boo"), undefined)
     else
-      feed_store.add collection:FEEDS_COLL, key:1, value:{feed_url}
+      feed_store.add collection:FEEDS_COLL, key:@next_index, value:{feed_url}
+      @next_index++
       callback?()
 
   requiresLogin: ->

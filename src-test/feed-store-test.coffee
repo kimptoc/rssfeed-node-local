@@ -61,3 +61,14 @@ describe 'feed-store', ->
       should.exist objs
       _.keys(objs).length.should.equal 1
       done()
+
+    it 'all method returns all', (done) ->
+      feedstore.clear()
+      testobj1 = {"id":2,3:"a"}
+      testobj2 = {"id":3,3:"b"}
+      feedstore.add collection:"test1", key:testobj1.id, value:testobj1
+      feedstore.add collection:"test2", key:testobj2.id, value:testobj2
+      allObjs = feedstore.all()
+      should.exist allObjs
+      _.keys(allObjs).length.should.equal 2
+      done()

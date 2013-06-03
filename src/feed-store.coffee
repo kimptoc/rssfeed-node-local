@@ -31,6 +31,9 @@ class FeedStore
     wrapped_value = store.get(get_key(c, k))
     return wrapped_value?.value
 
+  all: ->
+    return store.getAll()
+
   find_all: (params) ->
     c = params.collection
 #    console.log JSON.stringify(c+"/"+JSON.stringify(store.getAll()))
