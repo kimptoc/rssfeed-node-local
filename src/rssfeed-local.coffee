@@ -11,6 +11,7 @@ class RssfeedLocal
     @token1 = undefined
     @token2 = undefined
     @next_index = _.keys(feed_store.all()).length + 1
+    # console.log "Next store index:#{@next_index}"
 
 
   login: (token1, token2, callback) ->
@@ -38,7 +39,7 @@ class RssfeedLocal
     if @requires_login == true and @logged_in == false
       callback?(new Error("boo"), undefined)
     else
-      feed_store.add collection:FEEDS_COLL, key:@next_index, value:{feed_url}
+      feed_store.add collection:FEEDS_COLL, key:@next_index, value:{feed_url,key:@next_index}
       @next_index++
       callback?()
 
@@ -53,6 +54,7 @@ class RssfeedLocal
       callback?(new Error("boo"), undefined)
     else
       feed_store.clear()
+      @next_index = 1
       callback?()
 
 
